@@ -1,10 +1,10 @@
 h1 {
     color:  green;
-    text-align: center;
+    text-align: left;
   }
 
 p{
-    color: rgba(255, 255, 255, 0.856);
+    color:black(199, 43, 43, 0.856);
     background-color: rgba(255, 255, 255, 0.897);
     border: 5px solid hl(0,50%,3%);
     font-family: "Times New Roman", Times, serif;
@@ -17,5 +17,5 @@ font-variant: Capital-caps;
 }
 li{
     color: tomato;
-    text-align: center;
+    text-align: left;
 }
