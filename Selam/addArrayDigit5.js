@@ -30,3 +30,5 @@ let addToArray = (n) => {
   return digitArray;
 };
 console.log(addDigitArray([3, 4, 2], [4, 6, 5], addToArray));
+console.log(addDigitArray([1,1], [1,2,3], addToArray));
+console.log(addDigitArray([1,1], [9,9], addToArray));

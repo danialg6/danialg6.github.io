@@ -39,15 +39,15 @@ describe("porcupine number", function () {
 
 describe("sum to target", function () {
   it("Index of the numbers whose sum is 9 is [0,1]", function () {
-    assert.deepStrictEqual(test.addToTarget([2, 7, 11, 15], 9), [0, 1]);
+    assert.deepStrictEqual(test.indicesArray([2, 7, 11, 15], 9), [0, 1]);
   });
 
   it("Index of the numbers whose sum is 6 is [0,2]", function () {
-    assert.deepStrictEqual(test.addToTarget([2, 3, 4], 6), [0, 2]);
+    assert.deepStrictEqual(test.indicesArray([2, 3, 4], 6), [0, 2]);
   });
 
   it("Index of the numbers whose sum is 6 is [0,1]", function () {
-    assert.deepStrictEqual(test.addToTarget([3, 3], 6), [0, 1]);
+    assert.deepStrictEqual(test.indicesArray([3, 3], 6), [0, 1]);
   });
 });
 
@@ -57,7 +57,7 @@ describe("sum to target", function () {
 
 describe("Most frequent", function () {
   it("The most frequent in the list is 4", function () {
-    assert.strictEqual(test.mostFrequent([4, 3, 6, 8, 3, 8, 4, 9, 6, 4]), 4);
+    assert.strictEqual(test.mostFrequnt([4, 3, 6, 8, 3, 8, 4, 9, 6, 4]), 4);
   });
 });
 
@@ -67,11 +67,11 @@ describe("Most frequent", function () {
 
 describe("sum closest to zero", function () {
   it("pair whose sum is closest to zero is [2,-2]", function () {
-    assert.deepStrictEqual(test.closestToZero([4, 2, -1, 3, -2, -3]), [2, -2]);
+    assert.deepStrictEqual(test.sumCloseToZero([4, 2, -1, 3, -2, -3]), [2, -2]);
   });
 
   it("pair whose sum is closest to zero is [1, -1] ", function () {
-    assert.deepStrictEqual(test.closestToZero([1, 4, -1, -2, -5]), [1, -1]);
+    assert.deepStrictEqual(test.sumCloseToZero([1, 4, -1, -2, -5]), [1, -1]);
   });
 });
 
@@ -80,15 +80,15 @@ describe("sum closest to zero", function () {
 
 describe("add array elements as numbers", function () {
   it("add [3, 4, 2] and [4, 6, 5] as numbers and return [8,0,7] ", function () {
-    assert.deepStrictEqual(test.addTwoNumbers([3, 4, 2], [4, 6, 5]), [8, 0, 7]);
+    assert.deepStrictEqual(test.addDigitArray([3, 4, 2], [4, 6, 5]), [8, 0, 7]);
   });
 
   it("add [1,1] and [1,2,3] as numbers and return [1,3,4]", function () {
-    assert.deepStrictEqual(test.addTwoNumbers([1, 1], [1, 2, 3]), [1, 3, 4]);
+    assert.deepStrictEqual(test.addDigitArray([1, 1], [1, 2, 3]), [1, 3, 4]);
   });
 
   it("add [1,1] and [9,9] as numbers and return [1,1,0]", function () {
-    assert.deepStrictEqual(test.addTwoNumbers([1, 1], [9, 9]), [1, 1, 0]);
+    assert.deepStrictEqual(test.addDigitArray([1, 1], [9, 9]), [1, 1, 0]);
   });
 });
 
@@ -98,11 +98,11 @@ describe("add array elements as numbers", function () {
 
 describe("add binary", function () {
   it("adding the binary strings '11' and '1' should give '100 ", function () {
-    assert.strictEqual(test.addBinary("11", "1"), "100");
+    assert.strictEqual(test.addBinary1("11", "1"), "100");
   });
 
   it("adding the binary strings '1010' and '1011' should give '10101 ", function () {
-    assert.strictEqual(test.addBinary("1010", "1011"), "10101");
+    assert.strictEqual(test.addBinary1("1010", "1011"), "10101");
   });
 });
 
@@ -113,15 +113,15 @@ describe("add binary", function () {
 
 describe("columnTitle ", function () {
   it("26 should return Z", function () {
-    assert.strictEqual(test.columnTitle(26), "Z");
+    assert.strictEqual(test.convertNumberToString(26), "Z");
   });
 
   it("28 should return AB", function () {
-    assert.strictEqual(test.columnTitle(28), "AB");
+    assert.strictEqual(test.convertNumberToString(28), "AB");
   });
 
   it("701 should return ZY", function () {
-    assert.strictEqual(test.columnTitle(701), "ZY");
+    assert.strictEqual(test.convertNumberToString(701), "ZY");
   });
 });
 
@@ -130,15 +130,15 @@ describe("columnTitle ", function () {
 
 describe("column Number ", function () {
   it("Z should return 26", function () {
-    assert.strictEqual(test.columnNumber("Z"), 26);
+    assert.strictEqual(test.convertStringToNumber("Z"), 26);
   });
 
   it("AB should return 28", function () {
-    assert.strictEqual(test.columnNumber("AB"), 28);
+    assert.strictEqual(test.convertStringToNumber("AB"), 28);
   });
 
   it("ZY should return 701", function () {
-    assert.strictEqual(test.columnNumber("ZY"), 701);
+    assert.strictEqual(test.convertStringToNumber("ZY"), 701);
   });
 });
 
@@ -150,19 +150,19 @@ describe("column Number ", function () {
 
 describe("strobogrammatic_number", function () {
   it("69 is a strobogrammatic number", function () {
-    assert.strictEqual(test.strobogrammaticNumber("69"), true);
+    assert.strictEqual(test.isStroboganticNumber(69), true);
   });
 
   it("101 is a strobogrammatic number", function () {
-    assert.strictEqual(test.strobogrammaticNumber("101"), true);
+    assert.strictEqual(test.isStroboganticNumber(101), true);
   });
 
   it("88 is a strobogrammatic number", function () {
-    assert.strictEqual(test.strobogrammaticNumber("88"), true);
+    assert.strictEqual(test.isStroboganticNumber(88), true);
   });
 
   it("868 is not a strobogrammatic number", function () {
-    assert.strictEqual(test.strobogrammaticNumber("868"), false);
+    assert.strictEqual(test.isStroboganticNumber(868), false);
   });
 });
 
@@ -172,11 +172,11 @@ describe("strobogrammatic_number", function () {
 
 describe("find the missing number", function () {
   it("the missing number from the given array is 2", function () {
-    assert.strictEqual(test.missingNumber([3, 0, 1]), 2);
+    assert.strictEqual(test.findMissingNumber([3, 0, 1]), 2);
   });
 
   it("the missing number from the given array is 8", function () {
-    assert.strictEqual(test.missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+    assert.strictEqual(test.findMissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
   });
 });
 
@@ -209,12 +209,12 @@ describe("search_insert_position of target", function () {
 
 describe("sub-array to give the largest sum", function () {
   it("[4,-1,2,1] is the subarray with largest sum, 6", function () {
-    assert.strictEqual(test.maxSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
+    assert.strictEqual(test.maxSubArraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6);
   });
 
   it("[5, -3, 3, -4, 1, 1, -2, 2, 5, 2] is the subarray with largest sum, 10", function () {
     assert.strictEqual(
-      test.maxSubarray([-3, 5, -3, 3, -4, 1, 1, -2, 2, 5, 2, -4, 2, -2]),
+      test.maxSubArraySum([-3, 5, -3, 3, -4, 1, 1, -2, 2, 5, 2, -4, 2, -2]),
       10
     );
   });
@@ -227,15 +227,15 @@ describe("sub-array to give the largest sum", function () {
 
 describe("contains duplicates at indices with max diiference of k", function () {
   it("[1,2,3,1] has element 1 at index 0 & 3 whose difference is 3 at max", function () {
-    assert.strictEqual(test.containsDuplicates([1, 2, 3, 1], 3), true);
+    assert.strictEqual(test.containDuplication([1, 2, 3, 1], 3), true);
   });
 
   it("[1,0,1,1] has element 1 at index 0 ,2& 3 whose difference is 3 at max", function () {
-    assert.strictEqual(test.containsDuplicates([1, 0, 1, 1], 1), true);
+    assert.strictEqual(test.containDuplication([1, 0, 1, 1], 1), true);
   });
 
   it("[1, 2, 3, 1, 2, 3] has duplicate elements whose difference is larger than the given max", function () {
-    assert.strictEqual(test.containsDuplicates([1, 2, 3, 1, 2, 3], 2), false);
+    assert.strictEqual(test.containDuplication([1, 2, 3, 1, 2, 3], 2), false);
   });
 });
 
@@ -267,7 +267,7 @@ describe("shortest_word_distance", function () {
 
 describe("move zeros", function () {
   it("", function () {
-    assert.deepStrictEqual(test.moveZeros([0, 1, 0, 12, 3]), [1, 3, 12, 0, 0]);
+    assert.deepStrictEqual(test.moveZero([0, 1, 0, 12, 3]), [1, 3, 12, 0, 0]);
   });
 });
 
@@ -276,10 +276,10 @@ describe("move zeros", function () {
 
 describe("reverse vowels", function () {
   it("given 'hello', reversing the vowels gives 'holle'", function () {
-    assert.strictEqual(test.reverseVowels("hello"), "holle");
+    assert.strictEqual(test.reverseVowel("hello"), "holle");
   });
   it("given 'leetcode', reversing the vowels gives 'leotcede'", function () {
-    assert.strictEqual(test.reverseVowels("leetcode"), "leotcede");
+    assert.strictEqual(test.reverseVowel("leetcode"), "leotcede");
   });
 });
 
@@ -317,12 +317,12 @@ describe("summary_ranges", function () {
 
 describe("greatest_common_divisor_of_strings", function () {
   it("find the greatest common divisor of the strings", function () {
-    assert.strictEqual(test.gcfStrings("ABCABC", "ABC"), "ABC");
+    assert.strictEqual(test.gcdString("ABCABC", "ABC"), "ABC");
   });
   it("find the greatest common divisor of the strings", function () {
-    assert.strictEqual(test.gcfStrings("ABABAB", "AB"), "AB");
+    assert.strictEqual(test.gcdString("ABABAB", "AB"), "AB");
   });
   it("find the greatest common divisor of the strings", function () {
-    assert.strictEqual(test.gcfStrings("ABCDEF", "ABC"), "");
+    assert.strictEqual(test.gcdString("ABCDEF", "ABC"), "");
   });
 });
