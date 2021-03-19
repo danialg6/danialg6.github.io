@@ -250,10 +250,10 @@ describe("contains duplicates at indices with max diiference of k", function () 
 
 describe("shortest_word_distance", function () {
   it('shortest word distance between "coding"&"practice"', function () {
-    assert.strictEqual(test.shortestWordDistance(["practice", "makes", "perfect", "coding", "makes"], "coding", "practice"), 3);
+    assert.strictEqual(test.distance(["practice", "makes", "perfect", "coding", "makes"], "coding", "practice"), 3);
   });
   it('shortest word distance between "makes"&"coding"', function () {
-    assert.strictEqual(test.shortestWordDistance(["practice", "makes", "perfect", "coding", "makes"], "makes", "coding"), 1);
+    assert.strictEqual(test.distance(["practice", "makes", "perfect", "coding", "makes"], "makes", "coding"), 1);
   });
 });
 
