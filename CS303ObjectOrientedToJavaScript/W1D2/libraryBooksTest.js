@@ -26,7 +26,9 @@ describe("library", function () {
 
     const titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];
     const authors = ["Bill Gates", "Steve Jobs", "Suzanne Collins"];
-    const ids = [1254, 3245, 4264];
+    const ids = [1254, 4264,3245 ];
+    const newBook = {libraryID:1144,title:"My New Book", author:"Me Too"};
+       // ids.push(1144);
 
 
     it("find titles", function () {
@@ -34,16 +36,14 @@ describe("library", function () {
     });
 
     it("find authors", function () {
-        assert.deepEqual(findAuthor(), authors);
+        assert.deepEqual(findAuthors(), authors);
     });
 
     it("find ids", function () {
-        assert.deepEqual(findIdBook(), ids);
+        assert.deepEqual(findIds(), ids);
     });
 
     it("add book", function () {
-        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
-        ids.push(1144);
         assert.deepEqual(addBook(newBook), newBook);
         assert.deepEqual(findIdBook(), ids);
     });

@@ -39,7 +39,7 @@ function findAuthor(libraryBook){
     }
     return authorBook;
 }
-function findIdBook(libraryBook){
+function findIDs(libraryBook){
     let idBook=""
    let  sortAuthor=libraryBook.sort((a,b)=>a-b)
     for(let bookId of sortAuthor){
