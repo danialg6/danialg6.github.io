@@ -1,22 +1,21 @@
+"use strict";
+/**
+ *  * @returns {Calculator} constructor function
+ */
+function Calculator(){
+    /**
+     * 
+     * @returns{Number} sum;
+     */
+    this.sum=function(){
+       return this.value1+this.value2;
+    };
+    /**
+     * 
+     * @returns {Number} multiplication;
+     */
+    this.mul=function(){
+        return this.value1*this.value2;
+    }
+};  
 
-/*eslient-disable*/
-let calculator={
-    value1:0,
-    value2:0,
-   getValues:function(op1,op2){
-       this.value1=op1;
-       this.value2=op2;
-   },
-   sum:function(){
-       const total=this.value1+this.value2;
-       return total;
-   },
-   mul:function(){
-     const total=this.value1*this.value2;
-     return total;
-   }
- 
- };
- calculator.getValues(5,10);
- console.log(calculator.sum());
- console.log(calculator.mul());

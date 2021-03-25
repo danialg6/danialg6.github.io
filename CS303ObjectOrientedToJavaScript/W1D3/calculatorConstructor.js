@@ -18,6 +18,7 @@
 //       }
 function Accumulator(initialValue, increment) {
     this.currentValue = initialValue;
+    this.increment=increment;
   
     this.read = function() {
       this.currentValue += increment;
