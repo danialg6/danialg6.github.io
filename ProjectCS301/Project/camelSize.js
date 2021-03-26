@@ -1,6 +1,5 @@
 function camelize(str) {
     let result=[];
-
    str=str.split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
    result.push(str[0])
   for(let i=1;i<str.length;i++){
