@@ -149,6 +149,6 @@ describe("sort users by age", function() {
   
   let arr5 = [ pette, johhn, marry ]; 
         it("sortByAge", function () {
-            assert.strictEqual(sortByAge(arr5), [johhn, marry, pette]);
+            assert.strictEqual(sortByAge(arr5), [johhn,marry,pette]);
         });
     });
