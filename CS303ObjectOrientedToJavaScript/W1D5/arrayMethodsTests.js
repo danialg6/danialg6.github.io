@@ -81,7 +81,7 @@ describe("unique", function () {
     let strings = ["Hare", "Krishna", "Hare", "Krishna",
         "Krishna", "Krishna", "Hare", "Hare", ":-O"];
     it("tests unique hare krishnas", function () {
-        assert.strictEqual(unique(strings), ["Hare", "Krishna", ":-O"]);
+        assert.deepEqual(unique(strings), ["Hare", "Krishna", ":-O"]);
     });
 });
 
@@ -97,13 +97,13 @@ Please use array .reduce method in the solution.
 describe("groupById", function() {
 
     it("creates an object grouped by id", function() {
-        let uusers = [
-            {id: 'john', name: "John Smith", age: 20},
-            {id: 'ann', name: "Ann Smith", age: 24},
-            {id: 'pete', name: "Pete Peterson", age: 31},
-          ];
+      let users = [
+        {id: 'john', name: "John Smith", age: 20},
+        {id: 'ann', name: "Ann Smith", age: 24},
+        {id: 'pete', name: "Pete Peterson", age: 31},
+      ];
   
-      assert.strictEqual(groupById(uusers), {
+      assert.deepEqual(groupById(users), {
         john: {id: 'john', name: "John Smith", age: 20},
         ann: {id: 'ann', name: "Ann Smith", age: 24},
         pete: {id: 'pete', name: "Pete Peterson", age: 31},
@@ -111,8 +111,8 @@ describe("groupById", function() {
     });
   
     it("works with an empty array", function() {
-      const uusers = [];
-      assert.strictEqual(groupById(uusers), {});
+      const users = [];
+      assert.deepEqual(groupById(users), {});
     });
   });
   //getAveargByAge
@@ -124,15 +124,31 @@ describe("groupById", function() {
     let arr7 = [ jjohn, ppete, mmary ];
     
         it("tests unique hare krishnas", function () {
-            assert.strictEqual(getAverageAge(arr7), 28);
+            assert.deepEqual(getAverageAge(arr7), 28);
         });
     });
 // shufle an array
-describe("decreasing order of the array", function() {
-    let arr6 = [1, 2, 3];
-   // shuffle(arr6);
-    
+describe("shuffle an array randomly", function() {
+    let arr6 = [1, 2, 3];    
         it("shuffle", function () {
-            assert.strictEqual(shuffle(arr6), (3,2,1));
+            assert.notDeepEqual(shuffle(arr6), [3,2,1]);
+        });
+    });
+    //copy and sorted array
+    describe("copy and sorted array", function() {
+        let arr4 = ["HTML", "JavaScript", "CSS"];   
+            it("copySorted", function () {
+                assert.deepEqual(copySorted(arr4), ["CSS","HTML","JavaScript"]);
+            });
+        });
+//sort users by age
+describe("sort users by age", function() {
+    let johhn = { name: "John", age: 25 };
+  let pette = { name: "Pete", age: 30 };
+  let marry = { name: "Mary", age: 28 };
+  
+  let arr5 = [ pette, johhn, marry ]; 
+        it("sortByAge", function () {
+            assert.strictEqual(sortByAge(arr5), [johhn, marry, pette]);
         });
     });
