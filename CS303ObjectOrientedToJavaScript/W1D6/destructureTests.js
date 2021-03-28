@@ -40,31 +40,31 @@ describe("topSalary", function() {
   /* Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’. */
   describe("getWeekDay", function() {
     it("3 January 2014 - friday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 3)), 'FR');
+      assert.equal(getWeekDay(new Date(2014, 0, 3)), 'FR');
     });
   
     it("4 January 2014 - saturday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 4)), 'SA');
+      assert.equal(getWeekDay(new Date(2014, 0, 4)), 'SA');
     });
   
     it("5 January 2014 - sunday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 5)), 'SU');
+      assert.equal(getWeekDay(new Date(2014, 0, 5)), 'SU');
     });
   
     it("6 January 2014 - monday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 6)), 'MO');
+      assert.equal(getWeekDay(new Date(2014, 0, 6)), 'MO');
     });
   
     it("7 January 2014 - tuesday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 7)), 'TU');
+      assert.equal(getWeekDay(new Date(2014, 0, 7)), 'TU');
     });
   
     it("8 January 2014 - wednesday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 8)), 'WE');
+      assert.equal(getWeekDay(new Date(2014, 0, 8)), 'WE');
     });
   
     it("9 January 2014 - thursday", function() {
-      assert.equal(getWeekday(new Date(2014, 0, 9)), 'TH');
+      assert.equal(getWeekDay(new Date(2014, 0, 9)), 'TH');
     });
   });
 

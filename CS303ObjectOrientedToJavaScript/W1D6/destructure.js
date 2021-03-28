@@ -1,7 +1,7 @@
 "use strict";
 
 //Create a date
-
+module.exports = {getWeekDay}
 //new Date(year, month, date, hour, minute, second, millisecond)
 let date = new Date(2012, 1, 20, 3, 12);
 console.log( date );
@@ -14,10 +14,8 @@ console.log( date );
 // Show a weekday 
 function getWeekDay(date) {
     let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
-  
     return days[date.getDay()];
   }
-  
   let datee = new Date(2014, 0, 3); // 3 Jan 2014
   console.log( getWeekDay(datee) ); // FR
 
