@@ -7,7 +7,11 @@
  * @returns {object} object
  */
 function myMap(arr, fn){
-    let result = fn(arr);
+    let result ;//= fn(arr);
+    let result;//=fn(arr);
+    for(let value of arr){
+     result=fn(value);
+}
     return result;
     }
     // function arrTimesthree(arr) {
@@ -21,12 +25,19 @@ function myMap(arr, fn){
     //filter
     
     function myFilter(arr,fn){
-        let result = fn();
+        let result;// = fn();
+        let result;//=fn(arr);
+        for(let value of arr){
+         result=fn(value);
+    }
         return result;
         }
 
         function myReduce(arr,fn){
-            let result=fn(arr);
+            let result;//=fn(arr);
+            for(let value of arr){
+             result=fn(value);
+        }
             return result;
         }
         // function sumReduce(arr){
