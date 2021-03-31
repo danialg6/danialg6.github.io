@@ -11,12 +11,15 @@ return arr.map(num => num * 2);
 //console.log(doubleNums(numArray));
 
 function doubleAges(arr){
-return arr.map(nums=>nums.age*2);
+  arr .map(item => item.age*=2);
+  return arr;
+    
 }
-// const peopleArray = [{name: "Sam", age: 15}, {name: "William", age: 6},
-//  {name: "Lucy", age: 13}, {name:
+//  const peopleArray = [{name: "Sam", age: 15}, {name: "William", age: 6},
+//   {name: "Lucy", age: 13}, {name:
 //     "Barney", age: 80}]
-//     console.log(doubleAges(peopleArray));
+//    console.log(doubleAges(peopleArray));
+   //peopleArray.map(doubleAges);
 
     
 function filterEven(arr){
