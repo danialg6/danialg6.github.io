@@ -20,16 +20,29 @@ function myMap(arr, fn){
 
     //filter
     
-    // function myFilter(arr,fn){
-    //     let result = [];
-    //     for(let i =0;i<arr.length;i++){
-    //     let callbackResult = fn(arr[i],i);
-    //     if(callbackResult){
-    //     result.push(arr[i]);
-    //     }
-    //     }
-    //     return result;
-    //     }
+    function myFilter(arr,fn){
+        let result = fn();
+        return result;
+        }
+
+        function myReduce(arr,fn){
+            let result=fn(arr);
+            return result;
+        }
+        // function sumReduce(arr){
+        //     let sum=0;
+        //     for(let value of arr){
+        //         sum=sum+value;
+        //     }
+        //     return sum;
+        // }
+        // function myEven(arr){
+        //     let result=[];
+        //     for(let values of arr){
+        //   result.push(values%2===0);
+        //       }
+        //     return result;
+        // }
         
     //     myFilter(arr,function(value,index){
     //     return value%2===0;
