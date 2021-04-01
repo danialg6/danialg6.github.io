@@ -6,13 +6,26 @@
  * @param {function} fn function
  * @returns {object} object
  */
-function myMap(arr, fn){
-    let result= fn(arr);
-//    for(let value of arr){
-//      result.push(fn(value));
-// }
-    return result;
-    }
+// function myMap(arr, fn){
+//     let result= fn(arr);
+// //    for(let value of arr){
+// //      result.push(fn(value));
+// // }
+//     return result;
+//     }
+    function myMap(arr,fn){
+        let result = [];
+        for(let i =0;i<arr.length;i++){
+        let callbackResult = fn(arr[i],i);
+        if(callbackResult){
+        result.push(arr[i]);
+        }
+        }
+        return result;
+        }
+        // function triple(value){
+        // return value%2===0
+        // };
     // function arrTimesthree(arr) {
     //     let result=[];
     //     for(let values of arr){
@@ -25,7 +38,7 @@ function myMap(arr, fn){
     
     function myFilter(arr,fn){
         let result = fn();
-    //     let result;//=fn(arr);
+        let result;//=fn(arr);
     //     for(let value of arr){
     //      result=fn(value);
     // }

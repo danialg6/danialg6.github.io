@@ -5,13 +5,19 @@ describe("My own map", function () {
     });
 
     it("multiply  an array of numbers by 3", function () {
-        function arrTimesthree(arr) {
-            let result=[];
-            for(let values of arr){
-                result.push(values*3);
-            }
-            return result;
-        }
+        //function arrTimesthree(arr) {
+            //
+            function arrTimesthree(value){
+                return value%2===0
+                };
+            //
+
+        //     let result=[];
+        //     for(let values of arr){
+        //         result.push(values*3);
+        //     }
+        //     return result;
+        // }
         assert.deepEqual(myMap(array,arrTimesthree), [3,6,9,12,15]);
        assert.deepEqual(array, [1,2,3,4,5]);  //test for pure function
     });
