@@ -10,39 +10,27 @@ Comment these out when you send it to the browser with the index.html mocha setu
 // const makeArmy = myExports.makeArmy;  
 
 
-describe("inArray", function () {
+describe("inArray", function() {
     let arr = [1, 2, 3, 4, 5, 6, 7];
-
-    it("returns the filter for values in array", function () {
-        let filter1To7 = inArray(arr);
-        assert.strictEqual(filter1To7(5), true);
-        assert.strictEqual(filter1To7(0), false);
-
-    });
-
+  
     it("returns the filter for values in array", function() {
-
-        let filter = inArray(arr);
-        assert.isTrue(filter(5));
-        assert.isFalse(filter(0));
-      });
+  
+      let filter = inArray(arr);
+      assert.isTrue(filter(5));
+      assert.isFalse(filter(0));
     });
-    
+  });
+  
 
-describe("inBetween", function () {
-
-    it("returns the filter for values between", function () {
-        let filter3to6 = inBetween(3, 6);
-        assert.strictEqual(filter3to6(5), true);
-        assert.strictEqual(filter3to6(0), false);
+  describe("inBetween", function() {
+  
+    it("returns the filter for values between", function() {
+      let filter = inBetween(3, 6);
+      assert.isTrue(filter(5));
+      assert.isFalse(filter(0));
     });
+  });
 
-    it("tests inBetween works with Array.filter", function () {
-        let filter3to6 = inBetween(3, 6);
-        const arr2 = [0, 4, 5, 10, 6, 100];
-        assert.deepEqual(arr2.filter(filter3to6), [4, 5]);
-    });
-});
 
 
 describe("byField", function(){
@@ -93,14 +81,9 @@ describe("byField", function(){
         const shooter0 = army[0]();
         assert.strictEqual(shooter0, 0);
       });
-    
-    
       it("army[5] shows 5", function() {
         const shooter5 = army[5]();
         assert.strictEqual(shooter5, 5);
       });
-    
-
-    
     });    
   });
