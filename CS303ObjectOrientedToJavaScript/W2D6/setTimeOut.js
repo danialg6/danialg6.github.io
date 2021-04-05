@@ -1,9 +1,8 @@
-"use strict";
 function printNumbers(from, to) {
     let current = from;
   
     setTimeout(function go() {
-      alert(current);
+      console.log(current);
       if (current < to) {
         setTimeout(go, 1000);
       }
@@ -12,4 +11,4 @@ function printNumbers(from, to) {
   }
   
   // usage:
-console.log(5, 10);
+  printNumbers(5, 10);

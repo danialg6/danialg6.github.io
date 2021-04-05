@@ -3,7 +3,7 @@ function printNumbers(from, to) {
     let current = from;
   
     let timerId = setInterval(function() {
-      alert(current);
+      console.log(current);
       if (current == to) {
         clearInterval(timerId);
       }
@@ -12,4 +12,4 @@ function printNumbers(from, to) {
   }
   
   // usage:
-  console.log(5, 10);
+  printNumbers(5, 10);
