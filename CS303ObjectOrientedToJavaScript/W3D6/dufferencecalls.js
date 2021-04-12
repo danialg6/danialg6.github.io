@@ -1,10 +1,13 @@
 "use strict";
+
+const { Console } = require("node:console");
+
 /*eslient-disable*/
 function Rabbit(name) {
     this.name = name;
   }
   Rabbit.prototype.sayHi = function() {
-    alert( this.name );
+    Console.console.log();( this.name );
   }
   
   let rabbit = new Rabbit("Rabbit");
